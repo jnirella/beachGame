@@ -1,0 +1,22 @@
+var qpBkdg = null;
+var qppBoard = null;
+let posiShark = null;
+let woodPlank = null;
+var qppMap = null;
+var sizeMap = 26;
+var iLocX = (sizeMap / 2);
+var iLocY = 0;
+var sizeBoard = 9;
+let loose = true;
+let win = false;
+let scrap = 0;
+let radarFar = 10;
+let radarMed = 9;
+let radarMin = 5;
+let totalSharks = 0;
+//how much cost a plank:
+const subtractScrapPlank = 10;
+let totalTime = "";
+let totalTimeFinal=0;
+let totalScore = 0;
+let intervalId;

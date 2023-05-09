@@ -1,0 +1,154 @@
+@import url('https://fonts.cdnfonts.com/css/sh-pinscher');
+
+#body{
+    background-color: #afe1ff;
+}
+
+h1,h2,p{
+    font-family: 'SH Pinscher', sans-serif;
+}
+                
+#containerB{
+    margin-top: 80px;
+
+}
+#mback{
+    background-color: #E0E0E0
+}
+
+#gameboard{
+    position: relative; 
+    box-sizing: border-box;
+    width:640px; 
+    height:640px; 
+    background: #aaaaaa; 
+    border: solid #AFE1FF 5px;
+    margin: auto;
+    float:left;
+    left:300px;
+    
+}
+#addTrash{
+    left:285px; 
+    top:255px; 
+    width:50px; 
+    height:50px; 
+    position:absolute; 
+    z-index:3;
+}
+#pj{
+    left:280px; 
+    top:280px; 
+    width:70px; 
+    height:70px; 
+    position:absolute; 
+    z-index:3;
+}
+#radar{
+    position:relative;
+    left: 200px;
+    height: 150px;
+    width:150px; 
+    float: left;
+}
+#radarTitle{
+    top: 60px; 
+    left:115px; 
+    position:absolute;
+}
+#radarN{
+    left:100px; 
+    top:100px; 
+    width:70px; 
+    height:70px; 
+    position:absolute;
+}
+#radarS{
+    left:100px; 
+    top:150px; 
+    width:70px; 
+    height:70px; 
+    position:absolute;
+}
+#radarE{
+    left:130px; 
+    top:120px; 
+    width:70px; 
+    height:70px; 
+    position:absolute;
+}
+#radarW{
+    left:78px; 
+    top: 120px; 
+    width:70px; 
+    height:70px; 
+    position:absolute;
+}
+#sharkCounter{
+    
+    float: left;
+    
+}
+#sCounterImg{
+    position: relative;
+    float: left;
+}
+
+#scrapCounterImg{
+    float: left;
+}
+#scrapCounter{
+    
+    float: left;
+}
+#counters{
+    float: left;
+    position: relative;
+    left: 350px;
+}
+#minutes,#colon,#seconds{
+    float: left;
+    position: relative;
+}
+#timer{
+    float: left;
+    position: relative;
+    left: 360px; 
+    top: 30px;
+}
+#winnerTitle{
+    position:absolute; 
+    z-index:3; 
+    left: 520px; 
+    top:230px; 
+    font-family:Atari, sans-serif; 
+    color: #1EB300; 
+    font-size: 3em;  
+}
+#menu>p{
+    font-size: 2em;
+
+}
+#exit{
+    
+    background-color: #30BE99;
+    font-family:Atari, sans-serif; 
+    font-size: 20px;
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    
+}
+#exit1{
+    position:absolute;
+    background-color: #30BE99;
+    font-family:Atari, sans-serif; 
+    font-size: 20px;
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    width: 80px;
+    top: 250px;
+    left:100px;
+}
+

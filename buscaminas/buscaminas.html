@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/atari" rel="stylesheet">
+    <link rel="stylesheet" href="./style/beach.css">
+    <link rel="stylesheet" href="./terceros/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <script src="./terceros/bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+
+    <title>cleanTheBeach</title>
+</head>
+
+<body id="body">
+    <div id="containerB">
+        <div>
+            <div id="radar">
+                <h2 id="radarTitle">RADAR</h2>
+                <div id="radarN"><img id="radarImg" src="./media/beach/radar/RadarNMed.png" alt="addTrash"> </img></div>
+                <div id="radarS"><img id="radarImg" src="./media/beach/radar/RadarSMed.png" alt="addTrash"> </img></div>
+                <div id="radarE"><img id="radarImg" src="./media/beach/radar/RadarEMed.png" alt="addTrash"> </img></div>
+                <div id="radarW"><img id="radarImg" src="./media/beach/radar/RadarWMed.png" alt="addTrash"> </img></div>
+                <div id="exit1" class="rounded-5 mt-5"><a href="../games.php" id="exit">EXIT</a></div>
+            </div>
+            <div id="gameboard">
+                <div id="addTrash"></div>
+                <div id="pj"><img id="imgPj" src="./media/beach/pjDown.gif" alt="pj"></img></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="fs-2 pe-2" id="timer">
+                        <p id="minutes">00</p>
+                        <p id="colon">:</p>
+                        <p id="seconds">00</p>
+                    </div>
+                    <!-- div col 1 -->
+                </div>
+                <div class="row">
+                    <div class="col">
+                    <div id="counters">
+                        <div>
+                            <div class="mt-5 mb-3">
+                                <div id="sCounterImg"></div>
+                                <p class="fs-4 mt-1" id="sharkCounter"></p>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <div>
+                                <div id="scrapCounterImg"></div>
+                                <p class="fs-4 mt-1" id="scrapCounter"></p>
+                            </div>
+                        </div>
+                    </div>
+                         <!-- div col-->
+                    </div>
+                   <!-- div row 2 -->
+                </div>
+                <!-- div row 1  -->
+            </div>
+
+        </div>
+    </div>
+    <h1 id="winnerTitle"></h1>
+    </div>
+    <div id="menu"></div>
+    <p id="score"></p>
+    <p id="database"></p>
+
+    <!-- Modal 1 -->
+<div class="modal fade" id="exampleModalToggle" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div id="mback" class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-3" id="exampleModalToggleLabel">Use the RADAR to know if you are near a shark.</h2>
+        </div>
+        <div class="modal-body">
+  
+          <p class="fs-4"><img id="radarImg" src="./media/beach/radar/RadarEFar.png"></img> The shark is far to the EAST</p>
+          <p class="fs-4"><img id="radarImg" src="./media/beach/radar/RadarEMed.png"></img> The shark is close to the EAST</p>
+          <p class="fs-4"><img id="radarImg" src="./media/beach/radar/RadarEMin.png"></img> The shark is very close to the EAST</p>
+          <p class="fs-4"> <b>TRICK:</b> <br> If more than one direction of the radar turns red, it means that the shark is VERY CLOSE</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">NEXT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal 2 -->
+  <div class="modal fade" id="exampleModalToggle2" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div id="mback" class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-3" id="exampleModalToggleLabel2">Right side menu</h1>  
+        </div>
+        <div class="modal-body">
+          <p class="fs-4"><img id="sharkImg" src="./media/beach/shark.gif" width="50px" height="50px"></img> Indicates how many sharks remain to be marked with a plank </p>
+          <p class="fs-4"><img id="sharkImg" src="./media/beach/trash.png" width="50px" height="50px"></img> Indicates how much scrap you have collected</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">NEXT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 3 -->
+  <div class="modal fade" id="exampleModalToggle3" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div id="mback" class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-3" id="exampleModalToggleLabel3">Movimiento</h2>
+        </div>
+        <div class="modal-body">
+          <p class="fs-4">Use <img id="sharkImg" src="./media/beach/arrowKeys.png" width="80px"></img> to move around the map </p>
+          <p class="fs-4">Use <img id="sharkImg" src="./media/beach/wasd.png" width="80px"></img> to build a platform with the collected scrap </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">NEXT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 4 -->
+  <div class="modal fade" id="exampleModalToggle4" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div id="mback" class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-3" id="exampleModalToggleLabel4">Go for it!!</h2>
+        </div>
+        <div class="modal-body">
+  
+          <p class="fs-4"><img id="warning" src="./media/beach/win.png" width="25px"> You will win the game if all the sharks are marked with a plank.</p><br>
+          <p class="fs-4"><img id="warning" src="./media/beach/gover.png" width="25px"> You will lose if a shark eats you </p><br>
+          <p class="fs-5"><img id="warning" src="./media/beach/warning.png" width="25px"> CAREFUL! If you use ALL the scrap to build platforms your final score will be very low</p>
+  
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">CLOSE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script type="text/javascript" src="./data/cookies.js" type="module"></script>
+    <script type="text/javascript" src="./createBoard.js" type="module"></script>
+    <script type="text/javascript" src="./config.js" type="module"></script>
+    <script type="text/javascript" src="./keyEvents.js" type="module"></script>
+    <script type="text/javascript" src="./initialize.js" type="module"></script>
+    <script type="text/javascript" src="./board.js" type="module"></script>
+    <script type="text/javascript" src="./radar.js" type="module"></script>
+    <script type="text/javascript" src="./buscaminas.js" type="module"></script>
+
+    
+</body>
+
+</html>
